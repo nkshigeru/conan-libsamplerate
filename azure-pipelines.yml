@@ -20,5 +20,6 @@ jobs:
   variables:
     DEVELOPER_DIR: /Applications/Xcode_10.1.app
     CONAN_APPLE_CLANG_VERSIONS: 10.0
+    CONAN_OPTIONS: "libsamplerate:shared=True"
   steps:
   - template: .ci/azure-pipelines/build.yml
