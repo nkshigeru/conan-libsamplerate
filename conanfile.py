@@ -17,7 +17,7 @@ class LibsamplerateConan(ConanFile):
     source_subfolder = "libsamplerate-%s" % version
 
     def config_options(self):
-        if self.settings.os == "Windows":
+        if self.settings.os == "Windows" and self.settings.compiler == "Visual Studio":
             del self.options.shared
 
     def source(self):
